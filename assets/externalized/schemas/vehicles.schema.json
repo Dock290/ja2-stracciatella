@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "enterSound": {
+        "$ref": "types/resource-path.schema.json"
+      },
+      "moveSound": {
+        "$ref": "types/resource-path.schema.json"
+      },
+      "profileID": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "movementType": {
+        "type": "string",
+        "enum": [
+          "FOOT",
+          "CAR",
+          "TRUCK",
+          "TRACKED",
+          "AIR"
+        ]
+      },
+      "armourType": {
+        "$ref": "types/id.schema.json"
+      },
+      "seats": {
+        "$ref": "types/uint8.schema.json"
+      }
+    },
+    "required": [
+      "enterSound",
+      "moveSound",
+      "profileID",
+      "movementType",
+      "armourType",
+      "seats"
+    ]
+  }
+}

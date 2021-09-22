@@ -1,0 +1,187 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "itemIndex": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "internalName": {
+        "$ref": "types/id.schema.json"
+      },
+      "internalType": {
+        "type": "string",
+        "enum": [
+          "PUNCH",
+          "PISTOL",
+          "M_PISTOL",
+          "SMG",
+          "RIFLE",
+          "SN_RIFLE",
+          "ASRIFLE",
+          "SHOTGUN",
+          "LMG",
+          "BLADE",
+          "THROWINGBLADE",
+          "THROWN",
+          "LAUNCHER",
+          "MONSTSPIT",
+          "PUNCHWEAPON",
+          "LAW",
+          "CANNON",
+          "NOWEAPON"
+        ]
+      },
+      "ubGraphicType": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubGraphicNum": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubWeight": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubPerPocket": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "usPrice": {
+        "$ref": "types/uint16.schema.json"
+      },
+      "ubCoolness": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "bReliability": {
+        "$ref": "types/int8.schema.json"
+      },
+      "bRepairEase": {
+        "$ref": "types/int8.schema.json"
+      },
+      "rateOfFire": {
+        "$ref": "types/int32.schema.json"
+      },
+      "usRange": {
+        "$ref": "types/uint16.schema.json"
+      },
+      "bNotBuyable": {
+        "type": "boolean"
+      },
+      "calibre": {
+        "$ref": "types/id.schema.json"
+      },
+      "ubReadyTime": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubShotsPer4Turns": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubBulletSpeed": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubImpact": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubDeadliness": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubMagSize": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubAttackVolume": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubHitVolume": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "Sound": {
+        "$ref": "types/resource-path.schema.json"
+      },
+      "attachment_Silencer": {
+        "type": "boolean"
+      },
+      "attachment_LaserScope": {
+        "type": "boolean"
+      },
+      "attachment_SpringAndBoltUpgrade": {
+        "type": "boolean"
+      },
+      "attachment_GunBarrelExtender": {
+        "type": "boolean"
+      },
+      "bDamageable": {
+        "type": "boolean"
+      },
+      "bRepairable": {
+        "type": "boolean"
+      },
+      "bWaterDamages": {
+        "type": "boolean"
+      },
+      "bMetal": {
+        "type": "boolean"
+      },
+      "bSinks": {
+        "type": "boolean"
+      },
+      "bShowStatus": {
+        "type": "boolean"
+      },
+      "standardReplacement": {
+        "$ref": "types/id.schema.json"
+      },
+      "ubShotsPerBurst": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubBurstPenalty": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "BurstSound": {
+        "$ref": "types/resource-path.schema.json"
+      },
+      "bBigGunList": {
+        "type": "boolean"
+      },
+      "bTwoHanded": {
+        "type": "boolean"
+      },
+      "attachment_SniperScope": {
+        "type": "boolean"
+      },
+      "attachment_UnderGLauncher": {
+        "type": "boolean"
+      },
+      "attachment_Bipod": {
+        "type": "boolean"
+      },
+      "attachment_Duckbill": {
+        "type": "boolean"
+      },
+      "bNotEditor": {
+        "type": "boolean"
+      },
+      "bDefaultUndroppable": {
+        "type": "boolean"
+      },
+      "usSmokeEffect": {
+        "$ref": "types/uint16.schema.json"
+      },
+      "bElectronic": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "bReliability",
+      "bRepairEase",
+      "internalName",
+      "internalType",
+      "itemIndex",
+      "rateOfFire",
+      "ubCoolness",
+      "ubGraphicNum",
+      "ubGraphicType",
+      "ubPerPocket",
+      "ubWeight",
+      "usPrice"
+    ]
+  }
+}

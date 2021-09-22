@@ -1,0 +1,190 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Game Settings",
+  "description": "The settings in this file have an influence on the game in general.",
+  "properties": {
+    "extra_hotkeys": {
+      "type": "boolean"
+    },
+    "can_enter_turnbased": {
+      "type": "boolean"
+    },
+    "middle_mouse_look": {
+      "type": "boolean"
+    },
+    "draw_item_shadow": {
+      "type": "boolean"
+    },
+    "ms_per_game_cycle": {
+      "$ref": "types/int32.schema.json"
+    },
+    "ms_per_time_slice": {
+      "$ref": "types/int32.schema.json"
+    },
+    "starting_cash_easy": {
+      "$ref": "types/int32.schema.json"
+    },
+    "starting_cash_medium": {
+      "$ref": "types/int32.schema.json"
+    },
+    "starting_cash_hard": {
+      "$ref": "types/int32.schema.json"
+    },
+    "drop_everything": {
+      "type": "boolean"
+    },
+    "all_drops_visible": {
+      "type": "boolean"
+    },
+    "multiple_interrupts": {
+      "type": "boolean"
+    },
+    "enemy_weapon_minimal_status": {
+      "$ref": "types/int8.schema.json"
+    },
+    "ai": {
+      "type": "object",
+      "properties": {
+        "better_aiming_choice": {
+          "type": "boolean"
+        },
+        "go_prone_more_often": {
+          "type": "boolean"
+        },
+        "threshold_cth_head": {
+          "$ref": "types/int8.schema.json"
+        },
+        "threshold_cth_legs": {
+          "$ref": "types/int8.schema.json"
+        },
+        "avoid_ambushes": {
+          "type": "boolean"
+        },
+        "stay_on_rooftop": {
+          "type": "boolean"
+        }
+      }
+    },
+    "enemy_elite_minimum_level": {
+      "$ref": "types/int8.schema.json"
+    },
+    "enemy_elite_maximum_level": {
+      "$ref": "types/int8.schema.json"
+    },
+    "gui_extras": {
+      "type": "boolean"
+    },
+    "extra_attachments": {
+      "type": "boolean"
+    },
+    "pablo_wont_steal": {
+      "type": "boolean"
+    },
+    "chance_to_hit_minimum": {
+      "type": "integer"
+    },
+    "chance_to_hit_maximum": {
+      "type": "integer"
+    },
+    "tactical_head_damage_multiplier": {
+      "type": "number"
+    },
+    "tactical_legs_damage_multiplier": {
+      "type": "number"
+    },
+    "always_show_cursor_in_tactical": {
+      "type": "boolean"
+    },
+    "show_hit_chance": {
+      "type": "boolean"
+    },
+    "website_loading_time_scale": {
+      "type": "number"
+    },
+    "imp": {
+      "type": "object",
+      "properties": {
+        "max_attribute_points": {
+          "$ref": "types/int8.schema.json"
+        },
+        "min_attribute_points": {
+          "$ref": "types/int8.schema.json"
+        },
+        "zero_attribute_points_bonus": {
+          "$ref": "types/int32.schema.json"
+        },
+        "bonus_attribute_points": {
+          "$ref": "types/int32.schema.json"
+        },
+        "pick_skills_directly": {
+          "type": "boolean"
+        },
+        "load_saved_merc_by_nickname": {
+          "type": "boolean"
+        },
+        "load_keep_inventory": {
+          "type": "boolean"
+        }
+      }
+    },
+    "merc_online_min_days": {
+      "$ref": "types/uint8.schema.json"
+    },
+    "merc_online_max_days": {
+      "$ref": "types/uint8.schema.json"
+    },
+    "progress": {
+      "type": "object",
+      "properties": {
+        "weight_kills": {
+          "type": "number"
+        },
+        "weight_control": {
+          "type": "number"
+        },
+        "weight_income": {
+          "type": "number"
+        },
+        "kills_per_point_easy": {
+          "$ref": "types/int8.schema.json"
+        },
+        "kills_per_point_medium": {
+          "$ref": "types/int8.schema.json"
+        },
+        "kills_per_point_hard": {
+          "$ref": "types/int8.schema.json"
+        },
+        "event_madlab_min": {
+          "$ref": "types/int8.schema.json"
+        },
+        "event_mike_min": {
+          "$ref": "types/int8.schema.json"
+        },
+        "event_iggy_min": {
+          "$ref": "types/int8.schema.json"
+        }
+      }
+    },
+    "unhired_merc_deaths_easy": {
+      "$ref": "types/int8.schema.json"
+    },
+    "unhired_merc_deaths_medium": {
+      "$ref": "types/int8.schema.json"
+    },
+    "unhired_merc_deaths_hard": {
+      "$ref": "types/int8.schema.json"
+    },
+    "campaign": {
+      "type": "object",
+      "properties": {
+        "start_sector": {
+          "$ref": "types/sector-id.schema.json"
+        },
+        "start_sector_revealed": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

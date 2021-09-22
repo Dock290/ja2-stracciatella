@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "gridNos": {
+        "type": "array",
+        "minLength": 2,
+        "maxLength": 2,
+        "items": {
+          "$ref": "types/uint16.schema.json"
+        }
+      },
+      "sector": {
+        "$ref": "types/sector-id.schema.json"
+      }
+    },
+    "required": [
+      "gridNos",
+      "sector"
+    ]
+  }
+}

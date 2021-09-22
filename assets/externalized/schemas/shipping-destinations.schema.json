@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "locationId": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "chargeRateOverNight": {
+        "$ref": "types/uint16.schema.json"
+      },
+      "chargeRate2Days": {
+        "$ref": "types/uint16.schema.json"
+      },
+      "chargeRateStandard": {
+        "$ref": "types/uint16.schema.json"
+      },
+      "flowersNextDayDeliveryCost": {
+        "$ref": "types/uint16.schema.json"
+      },
+      "flowersWhenItGetsThereCost": {
+        "$ref": "types/uint16.schema.json"
+      },
+      "canDeliver": {
+        "type": "boolean"
+      },
+      "isPrimary": {
+        "type": "boolean"
+      },
+      "deliverySector": {
+        "$ref": "types/sector-id.schema.json"
+      },
+      "deliverySectorZ": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "deliverySectorGridNo": {
+        "$ref": "types/uint16.schema.json"
+      },
+      "emailOffset": {
+        "$ref": "types/int32.schema.json"
+      },
+      "emailLength": {
+        "$ref": "types/int32.schema.json"
+      }
+    },
+    "required": [
+      "locationId",
+      "chargeRateOverNight",
+      "chargeRate2Days",
+      "chargeRateStandard",
+      "flowersNextDayDeliveryCost",
+      "flowersWhenItGetsThereCost"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "activation_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "starting_level": {
+      "$ref": "types/uint8.schema.json"
+    },
+    "inventory": {
+      "type": "array",
+      "items": {
+        "$ref": "types/id.schema.json"
+      }
+    },
+    "if_good_shooter": {
+      "type": "array",
+      "items": {
+        "$ref": "types/id.schema.json"
+      }
+    },
+    "if_normal_shooter": {
+      "type": "array",
+      "items": {
+        "$ref": "types/id.schema.json"
+      }
+    }
+  },
+  "required": [
+    "activation_codes",
+    "inventory",
+    "if_good_shooter",
+    "if_normal_shooter"
+  ]
+}

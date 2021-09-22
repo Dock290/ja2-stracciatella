@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "profileID": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "bioIndex": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "minDays": {
+        "$ref": "types/uint32.schema.json"
+      },
+      "minTotalSpending": {
+        "$ref": "types/uint32.schema.json"
+      },
+      "quotes": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "ADVERTISE",
+                "MERC_DEAD",
+                "CROSS_SELL"
+              ]
+            },
+            "quoteID": {
+              "$ref": "types/uint8.schema.json"
+            },
+            "profileID": {
+              "$ref": "types/uint8.schema.json"
+            }
+          },
+          "required": [
+            "type",
+            "quoteID"
+          ]
+        }
+      }
+    },
+    "required": [
+      "profileID",
+      "bioIndex",
+      "quotes"
+    ]
+  }
+}

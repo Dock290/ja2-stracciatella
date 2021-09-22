@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "sector": {
+        "$ref": "types/sector-id.schema.json"
+      },
+      "sectorLevel": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "adjacentSectors": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "N",
+            "S",
+            "W",
+            "E"
+          ]
+        }
+      },
+      "numTroops": {
+        "type": "array",
+        "items": {
+          "$ref": "types/uint8.schema.json"
+        }
+      },
+      "numTroopsVariance": {
+        "type": "array",
+        "items": {
+          "$ref": "types/uint8.schema.json"
+        }
+      },
+      "numElites": {
+        "type": "array",
+        "items": {
+          "$ref": "types/uint8.schema.json"
+        }
+      },
+      "numElitesVariance": {
+        "type": "array",
+        "items": {
+          "$ref": "types/uint8.schema.json"
+        }
+      },
+      "numCreatures": {
+        "type": "array",
+        "items": {
+          "$ref": "types/uint8.schema.json"
+        }
+      },
+      "numCreaturesVariance": {
+        "type": "array",
+        "items": {
+          "$ref": "types/uint8.schema.json"
+        }
+      }
+    },
+    "required": [
+      "sector",
+      "sectorLevel"
+    ]
+  }
+}

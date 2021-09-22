@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "profileID": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "internalName": {
+        "$ref": "types/id.schema.json"
+      },
+      "type": {
+        "type": "string",
+        "enum": [
+          "NOT_USED",
+          "VEHICLE",
+          "NPC",
+          "RPC",
+          "IMP",
+          "MERC",
+          "AIM"
+        ]
+      }
+    },
+    "required": [
+      "profileID",
+      "internalName",
+      "type"
+    ]
+  }
+}

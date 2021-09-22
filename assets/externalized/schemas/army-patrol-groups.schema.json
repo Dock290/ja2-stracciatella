@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "title": "Army Patrol Groups",
+  "description": "This defines the army patrol groups at the start of the game. All reinforcements use the composition of the troop/elite for refilling.\nLimitations: A point to sector A1 is ignored by the code, as the code assumes nobody is using A1 in any of the patrol groups.",
+  "maxLength": 50,
+  "items": {
+    "type": "object",
+    "title": "Patrol Group",
+    "description": "Definition of a single patrol group.",
+    "properties": {
+      "size": {
+        "description": "Desired size for the patrol group.",
+        "$ref": "types/int8.schema.json"
+      },
+      "priority": {
+        "description": "How important this patrol group is to the queen.",
+        "$ref": "types/int8.schema.json"
+      },
+      "points": {
+        "type": "array",
+        "description": "Where the patrol moves. Patrol points must not overlap with garrisoned sectors.",
+        "minItems": 2,
+        "maxItems": 4,
+        "items": {
+          "$ref": "types/sector-id.schema.json"
+        }
+      }
+    },
+    "required": [
+      "size",
+      "priority",
+      "points"
+    ]
+  }
+}

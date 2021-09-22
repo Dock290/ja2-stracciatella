@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "traverseWE": {
+      "type": "array",
+      "minLength": 16,
+      "maxLength": 16,
+      "items": {
+        "type": "array",
+        "minLength": 16,
+        "maxLength": 16,
+        "items": {
+          "$ref": "types/id.schema.json"
+        }
+      }
+    },
+    "traverseNS": {
+      "type": "array",
+      "minLength": 16,
+      "maxLength": 16,
+      "items": {
+        "type": "array",
+        "minLength": 16,
+        "maxLength": 16,
+        "items": {
+          "$ref": "types/id.schema.json"
+        }
+      }
+    },
+    "traverseThrough": {
+      "type": "array",
+      "minLength": 16,
+      "maxLength": 16,
+      "items": {
+        "type": "array",
+        "minLength": 16,
+        "maxLength": 16,
+        "items": {
+          "$ref": "types/id.schema.json"
+        }
+      }
+    },
+    "travelRatings": {
+      "type": "array",
+      "minLength": 16,
+      "maxLength": 16,
+      "items": {
+        "type": "array",
+        "minLength": 16,
+        "maxLength": 16,
+        "items": {
+          "$ref": "types/uint8.schema.json"
+        }
+      }
+    }
+  },
+  "required": [
+    "traverseWE",
+    "traverseNS",
+    "traverseThrough",
+    "travelRatings"
+  ]
+}

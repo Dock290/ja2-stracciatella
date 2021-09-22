@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "internalName": {
+        "$ref": "types/id.schema.json"
+      },
+      "filename": {
+        "$ref": "types/resource-path.schema.json"
+      }
+    },
+    "required": [
+      "internalName",
+      "filename"
+    ]
+  }
+}

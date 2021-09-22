@@ -1,0 +1,6 @@
+{
+    "type": "integer",
+    "minimum": -32768,
+    "maximum": 32767,
+    "title": "int32"
+}

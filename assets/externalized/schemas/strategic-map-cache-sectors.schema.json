@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "sectors": {
+      "type": "array",
+      "items": {
+        "$ref": "types/sector-id.schema.json"
+      }
+    },
+    "numTroops": {
+      "type": "array",
+      "minLength": 3,
+      "maxLength": 3,
+      "items": {
+        "$ref": "types/uint8.schema.json"
+      }
+    },
+    "numTroopsVariance": {
+      "type": "array",
+      "minLength": 3,
+      "maxLength": 3,
+      "items": {
+        "$ref": "types/uint8.schema.json"
+      }
+    }
+  },
+  "required": [
+    "sectors",
+    "numTroops",
+    "numTroopsVariance"
+  ]
+}

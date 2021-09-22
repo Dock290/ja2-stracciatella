@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "main_menu": {
+      "type": "array",
+      "items": {
+        "$ref": "types/resource-path.schema.json"
+      }
+    },
+    "laptop": {
+      "type": "array",
+      "items": {
+        "$ref": "types/resource-path.schema.json"
+      }
+    },
+    "tactical": {
+      "type": "array",
+      "items": {
+        "$ref": "types/resource-path.schema.json"
+      }
+    },
+    "tactical_enemypresent": {
+      "type": "array",
+      "items": {
+        "$ref": "types/resource-path.schema.json"
+      }
+    },
+    "tactical_battle": {
+      "type": "array",
+      "items": {
+        "$ref": "types/resource-path.schema.json"
+      }
+    },
+    "tactical_creature": {
+      "type": "array",
+      "items": {
+        "$ref": "types/resource-path.schema.json"
+      }
+    },
+    "tactical_creature_enemypresent": {
+      "type": "array",
+      "items": {
+        "$ref": "types/resource-path.schema.json"
+      }
+    },
+    "tactical_creature_battle": {
+      "type": "array",
+      "items": {
+        "$ref": "types/resource-path.schema.json"
+      }
+    },
+    "tactical_victory": {
+      "type": "array",
+      "items": {
+        "$ref": "types/resource-path.schema.json"
+      }
+    },
+    "tactical_defeat": {
+      "type": "array",
+      "items": {
+        "$ref": "types/resource-path.schema.json"
+      }
+    }
+  },
+  "required": [
+    "main_menu",
+    "laptop",
+    "tactical",
+    "tactical_enemypresent",
+    "tactical_battle",
+    "tactical_creature",
+    "tactical_creature_enemypresent",
+    "tactical_creature_battle",
+    "tactical_victory",
+    "tactical_defeat"
+  ]
+}

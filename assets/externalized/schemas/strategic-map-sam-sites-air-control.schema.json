@@ -1,0 +1,13 @@
+{
+  "type": "array",
+  "minLength": 16,
+  "maxLength": 16,
+  "items": {
+    "type": "array",
+    "minLength": 16,
+    "maxLength": 16,
+    "items": {
+      "$ref": "types/uint8.schema.json"
+    }
+  }
+}

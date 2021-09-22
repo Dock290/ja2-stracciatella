@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "itemIndex": {
+        "$ref": "types/uint16.schema.json"
+      },
+      "internalName": {
+        "$ref": "types/id.schema.json"
+      },
+      "usItemClass": {
+        "$ref": "types/uint32.schema.json"
+      },
+      "ubClassIndex": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubCursor": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubGraphicType": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubGraphicNum": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubWeight": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "ubPerPocket": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "usPrice": {
+        "$ref": "types/uint16.schema.json"
+      },
+      "ubCoolness": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "bReliability": {
+        "$ref": "types/int8.schema.json"
+      },
+      "bRepairEase": {
+        "$ref": "types/int8.schema.json"
+      },
+      "bDamageable": {
+        "type": "boolean"
+      },
+      "bRepairable": {
+        "type": "boolean"
+      },
+      "bWaterDamages": {
+        "type": "boolean"
+      },
+      "bMetal": {
+        "type": "boolean"
+      },
+      "bSinks": {
+        "type": "boolean"
+      },
+      "bShowStatus": {
+        "type": "boolean"
+      },
+      "bHiddenAddon": {
+        "type": "boolean"
+      },
+      "bTwoHanded": {
+        "type": "boolean"
+      },
+      "bNotBuyable": {
+        "type": "boolean"
+      },
+      "bAttachment": {
+        "type": "boolean"
+      },
+      "bBigGunList": {
+        "type": "boolean"
+      },
+      "bNotEditor": {
+        "type": "boolean"
+      },
+      "bDefaultUndroppable": {
+        "type": "boolean"
+      },
+      "bUnaerodynamic": {
+        "type": "boolean"
+      },
+      "bElectronic": {
+        "type": "boolean"
+      },
+      "bInseparable": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "itemIndex",
+      "internalName",
+      "usItemClass",
+      "ubClassIndex",
+      "ubCursor",
+      "ubGraphicType",
+      "ubGraphicNum",
+      "ubWeight",
+      "ubPerPocket",
+      "usPrice",
+      "ubCoolness",
+      "bReliability",
+      "bRepairEase"
+    ]
+  }
+}

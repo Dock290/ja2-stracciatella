@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "profileId": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "sectors": {
+        "type": "array",
+        "items": {
+          "$ref": "types/sector-id.schema.json"
+        }
+      },
+      "placedAtStart": {
+        "type": "boolean"
+      },
+      "useAlternateMap": {
+        "type": "boolean"
+      },
+      "sciFiOnly": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "profileId",
+      "sectors",
+      "placedAtStart"
+    ]
+  }
+}

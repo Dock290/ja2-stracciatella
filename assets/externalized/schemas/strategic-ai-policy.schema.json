@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "queens_pool_of_troops_easy": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "queens_pool_of_troops_medium": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "queens_pool_of_troops_hard": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "initial_garrison_percentages_easy": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "initial_garrison_percentages_medium": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "initial_garrison_percentages_hard": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "min_enemy_group_size_easy": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "min_enemy_group_size_medium": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "min_enemy_group_size_hard": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "enemy_starting_alert_level_easy": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "enemy_starting_alert_level_medium": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "enemy_starting_alert_level_hard": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "enemy_starting_alert_decay_easy": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "enemy_starting_alert_decay_medium": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "enemy_starting_alert_decay_hard": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "time_evaluate_in_minutes_easy": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "time_evaluate_in_minutes_medium": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "time_evaluate_in_minutes_hard": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "time_evaluate_variance_easy": {
+      "$ref": "types/int32.schema.json"
+    },
+    "time_evaluate_variance_medium": {
+      "$ref": "types/int32.schema.json"
+    },
+    "time_evaluate_variance_hard": {
+      "$ref": "types/int32.schema.json"
+    },
+    "grace_period_in_hours_easy": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "grace_period_in_hours_medium": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "grace_period_in_hours_hard": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "patrol_grace_period_in_days_easy": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "patrol_grace_period_in_days_medium": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "patrol_grace_period_in_days_hard": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "num_aware_battles_easy": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "num_aware_battles_medium": {
+      "$ref": "types/uint32.schema.json"
+    },
+    "num_aware_battles_hard": {
+      "$ref": "types/uint32.schema.json"
+    }
+  },
+  "required": [
+    "queens_pool_of_troops_easy",
+    "queens_pool_of_troops_medium",
+    "queens_pool_of_troops_hard",
+    "initial_garrison_percentages_easy",
+    "initial_garrison_percentages_medium",
+    "initial_garrison_percentages_hard",
+    "min_enemy_group_size_easy",
+    "min_enemy_group_size_medium",
+    "min_enemy_group_size_hard",
+    "enemy_starting_alert_level_easy",
+    "enemy_starting_alert_level_medium",
+    "enemy_starting_alert_level_hard",
+    "enemy_starting_alert_decay_easy",
+    "enemy_starting_alert_decay_medium",
+    "enemy_starting_alert_decay_hard",
+    "time_evaluate_in_minutes_easy",
+    "time_evaluate_in_minutes_medium",
+    "time_evaluate_in_minutes_hard",
+    "time_evaluate_variance_easy",
+    "time_evaluate_variance_medium",
+    "time_evaluate_variance_hard",
+    "grace_period_in_hours_easy",
+    "grace_period_in_hours_medium",
+    "grace_period_in_hours_hard",
+    "patrol_grace_period_in_days_easy",
+    "patrol_grace_period_in_days_medium",
+    "patrol_grace_period_in_days_hard",
+    "num_aware_battles_easy",
+    "num_aware_battles_medium",
+    "num_aware_battles_hard"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "sector": {
+        "$ref": "types/sector-id.schema.json"
+      },
+      "landType": {
+        "$ref": "types/id.schema.json"
+      },
+      "sectorLevel": {
+        "$ref": "types/uint8.schema.json"
+      }
+    },
+    "required": [
+      "sector",
+      "landType"
+    ]
+  }
+}

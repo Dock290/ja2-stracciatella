@@ -153,6 +153,7 @@ public:
 	virtual const LoadingScreen* getLoadingScreenForSector(uint8_t sectorId, uint8_t sectorLevel, bool isNight) const override;
 	virtual const LoadingScreen* getLoadingScreen(uint8_t index) const override;
 
+	std::unique_ptr<rapidjson::Document> readJsonDataFile(const ST::string& fileName) const;
 protected:
 	RustPointer<EngineOptions> m_engineOptions;
 	
@@ -256,7 +257,7 @@ protected:
 	bool loadMercsData();
 	void loadVehicles();
 
-	std::unique_ptr<rapidjson::Document> readJsonDataFile(const ST::string& fileName) const;
+	std::unique_ptr<rapidjson::Document> readJsonDataFileWithSchema(const ST::string& jsonPath, const ST::string& schemaPath) const;
 
 	/**
 	 * @param profileID

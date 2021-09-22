@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "entranceSector": {
+        "$ref": "types/sector-id.schema.json"
+      },
+      "associatedTownId": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "mineType": {
+        "type": "string",
+        "enum": [
+          "GOLD_MINE",
+          "SILVER_MINE"
+        ]
+      },
+      "minimumMineProduction": {
+        "$ref": "types/uint16.schema.json"
+      },
+      "mineSectors": {
+        "type": "array",
+        "items": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "types/sector-id.schema.json"
+              },
+              {
+                "$ref": "types/uint8.schema.json"
+              }
+            ]
+          }
+        }
+      },
+      "faceDisplayYOffset": {
+        "$ref": "types/int16.schema.json"
+      },
+      "headMinerAssigned": {
+        "type": "boolean"
+      },
+      "delayDepletion": {
+        "type": "boolean"
+      },
+      "noDepletion": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "entranceSector",
+      "associatedTownId",
+      "mineType",
+      "minimumMineProduction",
+      "mineSectors"
+    ]
+  }
+}

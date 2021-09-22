@@ -1,0 +1,6 @@
+{
+    "type": "string",
+    "title": "Sector Id",
+    "description": "String representation of sector ids, such as `A1`, `A2`, `B1` etc.",
+    "pattern": "^[A-Z][0-9]+$"
+}

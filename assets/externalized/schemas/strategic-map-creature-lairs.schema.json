@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "associatedMineId": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "lairId": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "sectors": {
+        "type": "array",
+        "items": {
+          "type": "array",
+          "minLength": 3,
+          "maxLength": 3,
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "types/sector-id.schema.json"
+              },
+              {
+                "$ref": "types/uint8.schema.json"
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "QUEEN_LAIR",
+                  "LAIR",
+                  "LAIR_ENTRANCE",
+                  "INNER_MINE",
+                  "OUTER_MINE",
+                  "FEEDING_GROUNDS",
+                  "MINE_EXIT"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "entranceSector": {
+        "type": "array",
+        "minLength": 2,
+        "maxLength": 2,
+        "items": {
+          "oneOf": [
+            {
+              "$ref": "types/sector-id.schema.json"
+            },
+            {
+              "$ref": "types/uint8.schema.json"
+            }
+          ]
+        }
+      },
+      "warpExit": {
+        "type": "object",
+        "properties": {
+          "sector": {
+            "$ref": "types/sector-id.schema.json"
+          },
+          "gridNo": {
+            "$ref": "types/uint16.schema.json"
+          }
+        },
+        "required": [
+          "sector",
+          "gridNo"
+        ]
+      },
+      "attackSectors": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "sector": {
+              "$ref": "types/sector-id.schema.json"
+            },
+            "chance": {
+              "$ref": "types/uint8.schema.json"
+            },
+            "insertionCode": {
+              "type": "string",
+              "enum": [
+                "NORTH",
+                "SOUTH",
+                "EAST",
+                "WEST",
+                "GRIDNO",
+                "ARRIVING_GAME",
+                "CHOPPER",
+                "PRIMARY_EDGEINDEX",
+                "SECONDARY_EDGEINDEX",
+                "CENTER"
+              ]
+            },
+            "insertionGridNo": {
+              "$ref": "types/uint16.schema.json"
+            }
+          },
+          "required": [
+            "sector",
+            "chance",
+            "insertionCode"
+          ]
+        }
+      }
+    },
+    "required": [
+      "associatedMineId",
+      "lairId",
+      "sectors",
+      "entranceSector",
+      "warpExit",
+      "attackSectors"
+    ]
+  }
+}

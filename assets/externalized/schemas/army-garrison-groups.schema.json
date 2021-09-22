@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "title": "Army Garrison Groups",
+  "description": "Army garrison groups definine stationary enemy troops that should be present at game start.",
+  "items": {
+    "type": "object",
+    "properties": {
+      "sector": {
+        "description": "The sector that is garrisoned.",
+        "$ref": "types/sector-id.schema.json"
+      },
+      "composition": {
+        "description": "What army composision to use for the garrison.",
+        "$ref": "types/id.schema.json",
+        "x-references": "army-compositions json"
+      }
+    },
+    "required": [
+      "sector",
+      "composition"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "actionCode": {
+        "$ref": "types/uint16.schema.json"
+      },
+      "gridNo": {
+        "$ref": "types/uint16.schema.json"
+      },
+      "amount": {
+        "$ref": "types/uint16.schema.json"
+      }
+    },
+    "required": [
+      "actionCode"
+    ]
+  }
+}

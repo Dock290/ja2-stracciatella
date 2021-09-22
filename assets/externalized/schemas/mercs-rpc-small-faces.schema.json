@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "profileID": {
+        "$ref": "types/uint8.schema.json"
+      },
+      "eyesXY": {
+        "type": "array",
+        "minLength": 2,
+        "maxLength": 2,
+        "items": {
+          "$ref": "types/int8.schema.json"
+        }
+      },
+      "mouthXY": {
+        "type": "array",
+        "minLength": 2,
+        "maxLength": 2,
+        "items": {
+          "$ref": "types/int8.schema.json"
+        }
+      }
+    },
+    "required": [
+      "profileID",
+      "eyesXY",
+      "mouthXY"
+    ]
+  }
+}

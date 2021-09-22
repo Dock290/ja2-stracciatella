@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "fact": {
+        "$ref": "types/int32.schema.json"
+      },
+      "gridNo": {
+        "$ref": "types/int16.schema.json"
+      }
+    },
+    "required": [
+      "fact",
+      "gridNo"
+    ]
+  }
+}

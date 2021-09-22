@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "from": {
+        "$ref": "types/id.schema.json"
+      },
+      "to": {
+        "$ref": "types/id.schema.json"
+      }
+    },
+    "required": [
+      "from",
+      "to"
+    ]
+  }
+}

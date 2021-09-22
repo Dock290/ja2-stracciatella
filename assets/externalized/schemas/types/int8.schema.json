@@ -1,0 +1,6 @@
+{
+    "type": "integer",
+    "minimum": -128,
+    "maximum": 127,
+    "title": "int8"
+}
