@@ -29,7 +29,7 @@ class LauncherActivity : AppCompatActivity() {
     private val jsonFormat = Json {
         prettyPrint = true
     }
-    private val ja2JsonFilename = ".ja2/ja2.json"
+    private val ja2JsonFilename = "ja2.json"
     private val gameDirKey = "game_dir"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -118,7 +118,7 @@ class LauncherActivity : AppCompatActivity() {
 
     private val ja2JsonPath: String
         get() {
-            return "${applicationContext.filesDir.absolutePath}/$ja2JsonFilename"
+            return "${applicationContext.getExternalFilesDir("")?.absolutePath}/$ja2JsonFilename"
         }
 
     private fun loadJA2Json() {

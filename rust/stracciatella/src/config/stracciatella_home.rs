@@ -7,7 +7,7 @@ pub fn find_stracciatella_home() -> Result<PathBuf, String> {
     #[cfg(all(not(windows), not(target_os = "android")))]
     let base = dirs::home_dir();
     #[cfg(target_os = "android")]
-    let base = match crate::android::get_android_app_dir() {
+    let base = match crate::android::get_android_app_external_dir("") {
         Ok(v) => Some(v),
         Err(e) => {
             log::error!("JNI Error: {}", e);
@@ -16,8 +16,10 @@ pub fn find_stracciatella_home() -> Result<PathBuf, String> {
     };
     #[cfg(windows)]
     let base = dirs::document_dir();
-    #[cfg(not(windows))]
+    #[cfg(all(not(windows), not(target_os = "android")))]
     let dir = ".ja2";
+    #[cfg(target_os = "android")]
+    let dir = "";
     #[cfg(windows)]
     let dir = "JA2";
 
