@@ -19,18 +19,18 @@
     <string name="sound_text_title">Enable sound</string>
     <string name="fullscreen_text_title">Enable fullscreen</string>
     <string-array name="resversionArray">
-        <item>ENGLISH</item>
-        <item>DUTCH</item>
-        <item>FRENCH</item>
-        <item>GERMAN</item>
-        <item>ITALIAN</item>
-        <item>POLISH</item>
-        <item>RUSSIAN</item>
-        <item>RUSSIAN_GOLD</item>
+        <item>English</item>
+        <item>Dutch</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Italian</item>
+        <item>Polish</item>
+        <item>Russian</item>
+        <item>Russian (Gold)</item>
     </string-array>
     <string-array name="scalingArray">
-        <item>LINEAR</item>
-        <item>NEAR_PERFECT</item>
-        <item>PERFECT</item>
+        <item>Linear interpolation</item>
+        <item>Near perfect with oversampling</item>
+        <item>Pixel perfect centered</item>
     </string-array>
 </resources>

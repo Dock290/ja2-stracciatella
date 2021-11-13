@@ -98,7 +98,6 @@ class LauncherActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-
         saveJA2Json()
     }
 
@@ -253,7 +252,13 @@ class LauncherActivity : AppCompatActivity() {
         configurationModel.mods.value?.forEach { mods.add(JsonPrimitive(it)) }
         jsonMap[modsKey] = JsonArray(mods)
 
-        jsonMap[resKey] = JsonPrimitive(configurationModel.res.value)
+        var res = configurationModel.res.value
+        if (res == null || res.isBlank()) {
+            res = "640x480"
+            configurationModel.setRes(res)
+        }
+        jsonMap[resKey] = JsonPrimitive(res)
+
         jsonMap[brightnessKey] = JsonPrimitive(configurationModel.brightness.value)
         jsonMap[resversionKey] = JsonPrimitive(configurationModel.resversion.value)
         jsonMap[fullscreenKey] = JsonPrimitive(configurationModel.fullscreen.value)

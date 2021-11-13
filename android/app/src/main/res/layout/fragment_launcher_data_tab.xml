@@ -127,17 +127,18 @@
                     android:id="@+id/resTextInput"
                     android:layout_width="180dip"
                     android:layout_height="wrap_content"
+                    android:autofillHints="640x480"
                     android:hint="640x480"
+                    android:importantForAutofill="yes"
+                    android:inputType="text"
                     android:maxLines="1"
+                    android:paddingLeft="8dp"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="40dp"
-                    tools:layout_conversion_absoluteWidth="206dp"
-                    android:autofillHints="640x480"
-                    android:importantForAutofill="yes"
-                    android:inputType="text" />
+                    tools:layout_conversion_absoluteWidth="206dp" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -168,18 +169,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <CheckBox
-                android:id="@+id/fullscreenCheckBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:button="@null"
-                android:checked="true"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:minHeight="48dp"
-                android:text="@string/fullscreen_text_title" />
 
             <CheckBox
                 android:id="@+id/soundCheckBox"

@@ -41,7 +41,7 @@ class PlaceholderFragment : Fragment() {
         }
         val nosoundTextView: TextView = root.findViewById(R.id.nosoundTextView)
         configurationModel.nosound.observe(viewLifecycleOwner) {
-            nosoundTextView.text = it.toString()
+            nosoundTextView.text = (!it).toString()
         }
         return root
     }

@@ -4,6 +4,24 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class ConfigurationModel : ViewModel() {
+    companion object {
+        val resversionList: List<String> = arrayListOf(
+            "ENGLISH",
+            "DUTCH",
+            "FRENCH",
+            "GERMAN",
+            "ITALIAN",
+            "POLISH",
+            "RUSSIAN",
+            "RUSSIAN_GOLD",
+        )
+
+        val scalingList: List<String> = arrayListOf(
+            "LINEAR",
+            "NEAR_PERFECT",
+            "PERFECT",
+        )
+    }
 
     val vanillaGameDir = MutableLiveData<String>()
     val mods = MutableLiveData<List<String>>()

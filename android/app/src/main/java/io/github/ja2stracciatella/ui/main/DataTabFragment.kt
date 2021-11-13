@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.codekidlabs.storagechooser.StorageChooser
 import io.github.ja2stracciatella.ConfigurationModel
 import io.github.ja2stracciatella.R
+import io.github.ja2stracciatella.util.Util
 import kotlinx.android.synthetic.main.fragment_launcher_data_tab.view.*
 
 
@@ -63,10 +64,9 @@ class DataTabFragment : Fragment() {
             showGameDirChooser()
         }
 
-        val resversionArray = resources.getStringArray(R.array.resversionArray)
         tab.resversionValueSpinner?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                configurationModel.setResversion(resversionArray[position])
+                configurationModel.setResversion(ConfigurationModel.resversionList[position])
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -75,7 +75,15 @@ class DataTabFragment : Fragment() {
 
         tab.resTextInput.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(editable: Editable?) {
-                configurationModel.setRes(editable.toString())
+                val resolution = editable.toString()
+                context?.let {
+                    if (Util.validateResolution(resolution)) {
+                        tab.resTextInput.setTextColor(ContextCompat.getColor(it, R.color.textPrimaryColor))
+                    } else {
+                        tab.resTextInput.setTextColor(ContextCompat.getColor(it, R.color.textColorRed))
+                    }
+                }
+                configurationModel.setRes(resolution)
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -85,18 +93,15 @@ class DataTabFragment : Fragment() {
             }
         })
 
-        val scalingArray = resources.getStringArray(R.array.scalingArray)
         tab.scalingValueSpinner?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                configurationModel.scaling.value?.let { configurationModel.setScaling(scalingArray[position]) }
+                configurationModel.scaling.value?.let {
+                    configurationModel.setScaling(ConfigurationModel.scalingList[position])
+                }
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
-        }
-
-        tab.fullscreenCheckBox.setOnCheckedChangeListener { _, isChecked ->
-            configurationModel.setFullscreen(isChecked)
         }
 
         tab.soundCheckBox.setOnCheckedChangeListener { _, isChecked ->
@@ -107,12 +112,11 @@ class DataTabFragment : Fragment() {
     }
 
     fun update(view: View) {
-        val resversionArray = resources.getStringArray(R.array.resversionArray)
-        view.resversionValueSpinner?.setSelection(resversionArray.indexOf(configurationModel.resversion.value))
+        view.resversionValueSpinner
+            ?.setSelection(ConfigurationModel.resversionList.indexOf(configurationModel.resversion.value))
         view.resTextInput?.setText(configurationModel.res.value)
-        val scalingArray = resources.getStringArray(R.array.scalingArray)
-        view.scalingValueSpinner?.setSelection(scalingArray.indexOf(configurationModel.scaling.value))
-        view.fullscreenCheckBox?.isChecked = configurationModel.fullscreen.value == true
+        view.scalingValueSpinner
+            ?.setSelection(ConfigurationModel.scalingList.indexOf(configurationModel.scaling.value))
         view.soundCheckBox?.isChecked = configurationModel.nosound.value == false
     }
 
