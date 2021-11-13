@@ -1,5 +1,6 @@
 package io.github.ja2stracciatella
 
+import android.os.Bundle
 import android.view.View
 import org.libsdl.app.SDLActivity
 
@@ -9,7 +10,14 @@ open class StracciatellaActivity : SDLActivity() {
             "hidapi",
             "SDL2",
             "ja2"
-        );
+        )
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // Hide navigation bar to solve some navigation bar issues on startup
+         setWindowStyle(true)
     }
 
     // We suppress deprecation warnings here as our Android SDK minimum version

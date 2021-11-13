@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import io.github.ja2stracciatella.ConfigurationModel
 import io.github.ja2stracciatella.R
@@ -23,11 +22,27 @@ class PlaceholderFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_launcher, container, false)
-        val textView: TextView = root.findViewById(R.id.section_label)
+        val gameDirTextView: TextView = root.findViewById(R.id.gameDirTextView)
         configurationModel = ViewModelProvider(requireActivity()).get(ConfigurationModel::class.java)
-        configurationModel.vanillaGameDir.observe(viewLifecycleOwner, Observer<String> {
-            textView.text = it
-        })
+        configurationModel.vanillaGameDir.observe(viewLifecycleOwner) {
+            gameDirTextView.text = it
+        }
+        val resversionTextView: TextView = root.findViewById(R.id.resversionTextView)
+        configurationModel.resversion.observe(viewLifecycleOwner) {
+            resversionTextView.text = it
+        }
+        val resTextView: TextView = root.findViewById(R.id.resTextView)
+        configurationModel.res.observe(viewLifecycleOwner) {
+            resTextView.text = it
+        }
+        val scalingTextView: TextView = root.findViewById(R.id.scalingTextView)
+        configurationModel.scaling.observe(viewLifecycleOwner) {
+            scalingTextView.text = it
+        }
+        val nosoundTextView: TextView = root.findViewById(R.id.nosoundTextView)
+        configurationModel.nosound.observe(viewLifecycleOwner) {
+            nosoundTextView.text = (!it).toString()
+        }
         return root
     }
 

@@ -94,9 +94,38 @@ fn get_dir_from_application_context(method_name: &'static str) -> Result<PathBuf
     Ok(PathBuf::from(&path_string))
 }
 
-/// Find ja2 stracciatella configuration directory for android
+fn get_dir_from_external_storage(method_name: &'static str, path: &'static str) -> Result<PathBuf> {
+    let jni_env = crate::android::get_global_jni_env()?;
+    let path_obj = jni_env.auto_local(jni_env.with_local_frame(SMALL_JNI_FRAME_SIZE, || {
+        let context = crate::android::get_application_context()?;
+        let path_obj = jni_env.new_string(&path)?.into();
+        let path = JValue::Object(path_obj);
+        let files_dir = jni_env
+            .call_method(
+                context,
+                method_name,
+                "(Ljava/lang/String;)Ljava/io/File;",
+                &[path],
+            )?
+            .l()?;
+        jni_env
+            .call_method(files_dir, "getAbsolutePath", "()Ljava/lang/String;", &[])?
+            .l()
+    })?);
+    let path = jni_env.get_string(path_obj.as_obj().into())?;
+    let path_string: String = path.into();
+
+    Ok(PathBuf::from(&path_string))
+}
+
+/// Find ja2 stracciatella internal directory for android
 pub fn get_android_app_dir() -> Result<PathBuf> {
     get_dir_from_application_context("getFilesDir")
+}
+
+/// Find ja2 stracciatella external directory for android
+pub fn get_android_app_external_dir(path: &'static str) -> Result<PathBuf> {
+    get_dir_from_external_storage("getExternalFilesDir", path)
 }
 
 /// Find cache directory for android

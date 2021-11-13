@@ -385,6 +385,8 @@ int main(int argc, char* argv[])
 			}
 			return EXIT_FAILURE;
 		}
+
+		SDL_SetHint(SDL_HINT_ORIENTATIONS, "LandscapeLeft LandscapeRight");
 		#endif
 		RustPointer<char> configFolderPath(EngineOptions_getStracciatellaHome());
 		if (configFolderPath.get() == NULL) {

@@ -12,4 +12,25 @@
     </string>
     <string name="game_dir_empty_text">No directory chosen yet</string>
     <string name="game_dir_select_button_label">Choose</string>
+    <string name="resversion_title_text">Game version</string>
+    <string name="res_title_text">Resolution</string>
+    <string name="scaling_text_title">Scaling</string>
+    <string name="debug_text_title">Enable debug mode</string>
+    <string name="sound_text_title">Enable sound</string>
+    <string name="fullscreen_text_title">Enable fullscreen</string>
+    <string-array name="resversionArray">
+        <item>English</item>
+        <item>Dutch</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Italian</item>
+        <item>Polish</item>
+        <item>Russian</item>
+        <item>Russian (Gold)</item>
+    </string-array>
+    <string-array name="scalingArray">
+        <item>Linear interpolation</item>
+        <item>Near perfect with oversampling</item>
+        <item>Pixel perfect centered</item>
+    </string-array>
 </resources>
